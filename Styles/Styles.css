@@ -1,0 +1,250 @@
+:root {
+	--Theme-color: #eca63c;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	padding: 0;
+	-webkit-user-drag: none;
+	margin: 0;
+}
+
+body {
+	background-color: var(--Theme-color);
+}
+
+.main-header {
+	background-image: linear-gradient(to top left, orange, var(--Theme-color), yellow);
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	display: flex;
+	padding-top: 130px;
+	padding-bottom: 20px;
+	width: 100%;
+	min-height: 100px;
+}
+
+.logo {
+	background-color: white;
+	height: 100px;
+	width: 100px;
+	font-size: 70px;
+	padding: 10px;
+	font-family: 'Style Script', cursive;
+	border-radius: 100%;
+	font-weight: bold;
+	display: flex;
+	top: 15px;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	border: 3px dashed;
+	box-shadow: 10px 8px 20px;
+}
+.hl1 {
+	color: white;
+	font-weight: bold;
+	cursor: default;
+}
+.hl1:hover {
+	border-bottom: 1px whitesmoke solid;
+}
+.hl2 {
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.strike {
+	text-decoration: line-through;
+	color: darkslategrey;
+}
+.OFF {
+	background: firebrick;
+	border-radius: 10px;
+	padding: 10px;
+}
+.type {
+	padding: 3px;
+	color: darkgreen;
+	border: solid;
+	margin-left: 10px;
+}
+
+.offers {
+	position: absolute;
+	background-color: darkslategray;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 50px;
+	align-items: center;
+	justify-content: center;
+	height: 380px;
+	max-height: 380px;
+	overflow-y: auto;
+}
+.category {
+	background-image: linear-gradient(to top left, orange, var(--Theme-color), yellow);
+	align-items: center;
+	justify-content: center;
+	display: inline-flex;
+	margin: 10px;
+	flex-flow: wrap row;
+	width: fit-content;
+	min-width: fit-content;
+	border-radius: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	box-shadow: 5px 2px 20px;
+}
+.category:hover {
+	box-shadow: 10px 5px 20px;
+	transition: 500ms ease;
+}
+.logo-cata {
+	background-color: white;
+	margin-right: 5px;
+	padding: 10px;
+	height: 80px;
+	display: inline-flex;
+	align-items: center;
+}
+legend {
+	font-size: 25px;
+	width: 100%;
+	font-weight: bolder;
+	background-color: white;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+legend:hover{
+	background-color: wheat;
+	transition: 200ms ease;
+}
+.CataDescription {
+	font-size: 15px;
+}
+.pageLinks {
+	color: wheat;
+}
+.pageLinks:hover {
+	color: white;
+	transition: 1s ease;
+}
+
+/* category */
+._category-header {
+	background-image: linear-gradient(to top left, orange, var(--Theme-color), yellow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+	height: 100px;
+	box-shadow: 0px 0px 20px;
+}
+._category-header div {
+	position: fixed;
+	cursor: pointer;
+	top: 10px;
+	left: 10px;
+	background: yellow;
+	padding: 5px;
+	border-radius: 10px;
+	z-index: 10;
+}
+._categories_ {
+	background-color: darkslategray;
+	position: absolute;
+	max-height: 100%;
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+._Item {
+	margin: 10px;
+	display: inline-flex;
+	padding: 10px;
+	width: 350px;
+	border-radius: 20px;
+	background-image: linear-gradient(to top left, orange, var(--Theme-color), orange);
+	position: relative;
+	box-shadow: 4px 4px 10px;
+}
+._Item:hover {
+	box-shadow: 5px 5px 15px 1px;
+	transition: 500ms ease;
+}
+iframe {
+	border-radius: 20px;
+}
+._catagoryH4 {
+	padding: 10px;
+	height: fit-content;
+	border-bottom: 1px solid white;
+	max-height: 115px;
+	overflow: auto;
+}
+.description {
+	position: absolute;
+	left: 140px;
+	top: 50%;
+}
+
+.Rating {
+	background-color: peru;
+	color: orange;
+	padding: 2px;
+	font-size: 13px;
+}
+
+.Delivery- {
+	padding: 10px;
+	color: darkslategrey;
+	margin-bottom: 10px;
+}
+.Delivery- i {
+	color: saddlebrown;
+}
+
+
+@media screen and (max-width: 500px) {
+	._Item{
+		display: flex;
+		width: fit-content;
+	}
+}
+
+.loader {
+	border-radius: 100px;
+	position: absolute;
+	top: 42%;
+	left: 42%;
+	z-index: 9999;
+	height: 80px;
+	width: 80px;
+	border-top: 10px solid aliceblue;
+	border-left: 10px solid var(--Theme-color);
+	border-bottom: 10px solid aliceblue;
+	border-right: 10px solid aliceblue;
+	animation: rotate 1.50s infinite;
+	display: none;
+}
+.blur {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: ivory;
+	position: fixed;
+	z-index: 9998;
+	filter: blur(10px);
+	opacity: 0.8;
+	display: none;
+}
+@keyframes rotate {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
